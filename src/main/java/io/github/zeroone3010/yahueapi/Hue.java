@@ -184,7 +184,7 @@ public final class Hue {
         .collect(toSet()));
   }
 
-  Light getLightById(final String id) {
+  public Light getLightById(final String id) {
     doInitialDataLoadIfRequired();
     return lights.get(id);
   }
@@ -458,4 +458,24 @@ public final class Hue {
       return CompletableFuture.supplyAsync(apiKeySupplier);
     }
   }
+
+  /**
+   * Returns a collection of all of the lights.
+   *
+   * @return A Collection of Light Objects.
+   */
+  public Collection<Light> getAllLights(){
+    doInitialDataLoadIfRequired();
+    return lights.values();
+  }
+
+  /**
+   * Returns the room associated with the id or null if the id does not exist.
+   *
+   * @return A room or null.
+   */
+  public Room getRoomById(String id){
+    return groups.get(id);
+  }
+
 }

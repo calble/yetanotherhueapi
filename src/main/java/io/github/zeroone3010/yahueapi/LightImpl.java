@@ -28,7 +28,7 @@ final class LightImpl implements Light {
     this.type = LightType.parseTypeString(light.getType());
   }
 
-  protected String getId() {
+  public String getId() {
     return id;
   }
 

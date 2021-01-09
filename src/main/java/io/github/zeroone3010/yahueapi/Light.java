@@ -1,6 +1,14 @@
 package io.github.zeroone3010.yahueapi;
 
 public interface Light {
+
+  /**
+   * Returns the id of the light.
+   *
+   * @return The Id of the light.
+   */
+  String getId();
+
   /**
    * Returns the name of the light, as set by the user.
    *
