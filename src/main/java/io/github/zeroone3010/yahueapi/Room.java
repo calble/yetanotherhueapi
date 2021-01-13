@@ -7,6 +7,7 @@ import java.util.Optional;
  * A room, a zone, or another type of group that has been configured into the Hue Bridge.
  */
 public interface Room {
+  String getId();
   /**
    * Returns the name of the room or zone, as set by the user.
    *
