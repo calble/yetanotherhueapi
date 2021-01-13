@@ -12,7 +12,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.logging.Logger;
 
-final class RoomImpl implements Room {
+final class   RoomImpl implements Room {
   private static final Logger logger = Logger.getLogger("RoomImpl");
 
   private final String id;
