@@ -475,7 +475,13 @@ public final class Hue {
    * @return A room or null.
    */
   public Room getRoomById(String id){
-    return groups.get(id);
+    Collection<Room> rooms = getGroupsOfType(GroupType.ROOM);
+    for(Room r : rooms){
+      if(r.getId().equals(id)){
+        return r;
+      }
+    }
+    return null;
   }
 
 }
